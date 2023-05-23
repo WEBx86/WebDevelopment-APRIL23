@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+
+    <!-- Internal CSS Start-->
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+        }
+        header{
+            background-color: rgb(134, 241, 134);
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        header>h1{
+            color: navy;
+        }
+        nav{
+            padding: 20px;
+            background-color: rgba(20, 200, 95, 0.87);
+        }
+        nav>a{
+            font-size: 20px;
+            font-weight: bolder;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
+            margin-left: 10px;
+            margin-right: 10px;
+            color: white;
+        }
+        nav>a:hover{
+            color: navy;
+        }
+        #sidebar{
+            height: 600px;
+            background-color: rgba(165, 238, 168, 0.88);
+            flex-grow: 2;
+        }
+        #container{
+            height: 600px;
+            background-color: rgba(102, 233, 106, 0.88);
+            flex-grow: 8;
+        }
+        section{
+            display: flex;
+        }
+        #container>.main{
+            height: 290px;
+            margin: 5px;
+            border: 1px solid white;
+            background-color: rgba(67, 245, 73, 0.88);
+        }
+        footer{
+            height: 150px;
+            background-color: rgba(4, 152, 9, 0.88);
+        }
+
+    </style>
+    <!-- Internal CSS End-->
+</head>
+<body>
+    <header>
+        <h1>WEBx86 Infotech</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Help</a>
+    </nav>
+    <section>
+        <div id="sidebar">
+
+        </div>
+        <div id="container">
+                <div class="main"></div>
+                <div class="main"></div>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>
