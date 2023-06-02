@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        #container{
+            display: grid; 
+            grid-template-columns: 200px 200px 200px 200px;
+            grid-template-rows: 200px 200px 200px;
+
+            grid-template-areas: 'xyz xyz a b' 'myself myself c c' 'myself myself d e';
+        }
+        #container div{
+            border: 2px solid white;
+        }
+        #div01{
+            grid-area:xyz;
+        }
+        #div02{
+            grid-area:a;
+        }
+        #div03{
+            grid-area:b;
+        }
+        #div04{
+            grid-area:myself;
+        }
+        #div05{
+            grid-area: c;
+        }
+        #div06{
+            grid-area:d;
+        }
+        #div07{
+            grid-area:e;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="div01">
+            <img src="../../Assets/Nature.jpg" alt="Nature" height="100%" width="100%">
+        </div>
+        <div id="div02">
+            <img src="../../Assets/Nature.jpg" alt="Nature" height="100%" width="100%">
+        </div>
+        <div id="div03">
+            <img src="../../Assets/Nature.jpg" alt="Nature" height="100%" width="100%">
+        </div>
+        <div id="div04">
+            <img src="../../Assets/Nature.jpg" alt="Nature" height="100%" width="100%">
+        </div>
+        <div id="div05">
+            <img src="../../Assets/Nature.jpg" alt="Nature" height="100%" width="100%">
+        </div>
+        <div id="div06">
+            <img src="../../Assets/Nature.jpg" alt="Nature" height="100%" width="100%">
+        </div>
+        <div id="div07">
+            <img src="../../Assets/Nature.jpg" alt="Nature" height="100%" width="100%">
+        </div>
+    </div>
+</body>
+</html>
