@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Data</title>
+</head>
+<body>
+
+    <h1>Product List 01</h1>
+    <h2>Product List 02</h2>
+    <h3>Product List 03</h3>
+    <h4>Product List 04</h4>
+
+    <ol><li>Product 01</li>
+        <li>Product 02</li>
+        <li>Product 03</li>
+        <li>Product 04</li></ol>
+
+    <h1>Hello list</h1>
+    <ol>
+        <li>Hello 01</li>
+        <li>Hello 02</li>
+    </ol>
+
+    <script>
+        var x = document.createElement("div");
+        var y = document.createTextNode("Hello JavaScript");
+        x.appendChild(y);
+        document.body.appendChild(x);
+        console.log(x);
+
+       var a = document.querySelector("ol");
+       var b = a.firstChild;
+       var c = a.lastChild;
+
+       console.log(c.innerHTML);
+
+      var p = document.querySelector("h1");
+      var q = p.nextElementSibling;
+      var r = q.nextElementSibling;
+      console.log(r.innerHTML);
+
+    </script>
+</body>
+</html>

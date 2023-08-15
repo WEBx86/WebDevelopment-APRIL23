@@ -1,0 +1,16 @@
+header
+{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.WEBx{
+  font-weight: 500;
+  font-size: 25px;
+  flex-grow: 1;
+}
+.Info>p{
+  margin: 0px;
+  flex-grow: 5;
+}

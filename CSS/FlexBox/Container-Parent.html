@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        section {
+            border: 2px solid red;
+            padding: 10px;
+            display: flex;
+            /* flex-direction: row-reverse; */
+            /* flex-wrap: wrap-reverse; */
+            /* justify-content: space-between; */
+            /* align-items: baseline; */
+            /* align-content: flex-end; */
+            height: 500px;
+           
+        }
+
+        section>div {
+            border: 1px solid green;
+            margin: 5px;
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            flex: 1;
+        }
+        /* #Div03{
+            flex-basis: 350px;
+        } */
+        /*#Div05{
+            flex-grow: 3;
+        } */
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>01</div>
+        <div>02</div>
+        <div id="Div03">03</div>
+        <div>04</div>
+        <div id="Div05">05</div>
+        <!-- <div>06</div>
+        <div>07</div>
+        <div>08</div>
+        <div>09</div>
+        <div>10</div> -->
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events</title>
+</head>
+<body>
+    <form>
+        <label id="LabelData"></label><br><br>
+        <label for="Name">Name : </label>
+        <input type="text" id="Name" name="Name" onfocus="FormEvents()">
+        <br><br>
+
+        <label for="Data">Data : </label>
+        <input type="text" id="Data" name="Data" onblur="OnBlurEvent()"> <br><br>
+
+        <label for="State">Select Your State</label>
+        <select name="State" id="State" onchange="ChangeState()">
+            <option value="Select">--- Select State ---</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Goa">Goa</option>
+            <option value="Manipur">Manipur</option>
+        </select>
+        <label id="demo"></label><br><br>
+        <input type="submit"> 
+    </form>
+
+    <button id="Btn" onclick="history()">Click Here !!!</button>
+
+    <script>
+        function FormEvents(){
+           document.getElementById('LabelData').innerHTML = "Hello User";
+        }
+
+        function OnBlurEvent(){
+            document.getElementById('LabelData').innerHTML = "Loose the focus";
+        }
+
+        function ChangeState(){
+            var x = document.getElementById('State');
+            document.getElementById('demo').innerHTML = x.value;
+        }
+
+
+        // var Button = document.getElementById('Btn');
+
+
+        // if(Button != null){
+        //     let a = Button.addEventListener("click", Data());
+        //     function Data(){
+        //        var x = new Date();
+        //        console.log(x);
+        //     }
+        // }
+
+
+        function history(){
+              var x = window.history.length;
+
+              console.log(x);
+        }
+    </script>
+</body>
+</html>

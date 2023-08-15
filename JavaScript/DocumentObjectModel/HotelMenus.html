@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Menus</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    <style>
+        #Container01{
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        #Container02{
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+        }
+        #Container02 button{
+            margin: 5px;
+        }
+        #Container03{
+            display: flex;
+            margin: 10px;
+            padding: 10px;
+            justify-content: center;
+        }
+        #Container04{
+            display: flex;
+            margin: 10px;
+            padding: 10px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <section id="Container01">
+        <button id="ShowMenu" onclick="ShowMenu()" class="btn btn-primary">Show Menus</button>
+    </section>
+    <section id="Container02">
+        <button id="VegMenu" onclick="Menu(true)" class="btn btn-success">Veg Menu</button>
+        <button id="NonVegMenu" onclick="Menu(false)" class="btn btn-danger">Non Veg Menu</button>
+    </section>
+
+    <section id="Container03">
+        <ol class="list-group list-group-numbered">
+            <li class="list-group-item">Paneer</li>
+            <li class="list-group-item">Dal</li>
+            <li class="list-group-item">Chapati</li>
+            <li class="list-group-item">Rice</li>
+        </ol>
+    </section>
+    
+    <section id="Container04">
+        <ol class="list-group list-group-numbered">
+            <li class="list-group-item">Chicken</li>
+            <li class="list-group-item">Chicekn 65</li>
+            <li class="list-group-item">Biryani</li>
+            <li class="list-group-item">Rice</li>
+        </ol>
+    </section>
+
+
+    <script>
+         var VegMenu = document.getElementById("VegMenu");
+         var NonVegMenu = document.getElementById("NonVegMenu");
+         var VegData = document.getElementById("Container03");
+         var NonVegData = document.getElementById("Container04");
+    
+         VegMenu.style.display = "none";
+         NonVegMenu.style.display = "none";
+         VegData.style.display = "none";
+         NonVegData.style.display = "none";
+
+         let ShowVeg = "";
+         let ShowNonVeg = "";
+
+         let ShowMenu = () =>{
+            VegMenu.style.display = "flex";
+            NonVegMenu.style.display = "flex";
+         }
+
+         var Menu = (value) =>{
+            if(value == true){
+                VegData.style.display = "flex";
+                NonVegData.style.display = "none";
+            }else{
+                NonVegData.style.display = "flex";
+                VegData.style.display = "none";
+            }
+         }
+
+        // var Veg = ["Paneer", "Dal", "Chapati", "Rice"];
+        // var NonVeg = ["Chicken", "Chicekn 65", "Biryani", "Rice"];
+        //  Veg.forEach(element => {
+        //       ShowVeg += `${element}`
+        //  });
+
+        //  NonVeg.forEach(element => {
+        //     ShowNonVeg += `${element}`
+        //  });
+
+        //  var Menu = (value) =>{
+        //     var NewSection = document.createElement("section");
+
+        //     if(value == true){
+        //         NewSection.setAttribute("id", "Container03");                 
+        //         var CreateTextData = document.createTextNode(ShowVeg);
+        //         NewSection.appendChild(CreateTextData);
+        //         document.body.appendChild(NewSection);      
+        //     }
+        //     else if(value == false){
+        //         NewSection.setAttribute("id", "Container03");                 
+        //         var CreateTextData = document.createTextNode(ShowNonVeg);
+        //         NewSection.appendChild(CreateTextData);
+        //         document.body.appendChild(NewSection);      
+        //     }else{
+        //         alert("Please check your code !!!!");
+        //     }
+        //  }
+
+    </script>
+</body>
+</html>

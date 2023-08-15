@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Form Object</title>
+</head>
+<body>
+    <form id="FormData">
+        <label for="FirstName">First Name</label>
+        <input type="text" name="FName" id="FirstName"><br><br>
+
+        <label for="MiddleName">Middle Name</label>
+        <input type="text" name="LName" id="MiddleName"><br><br>
+
+        <label for="LastName">Last Name</label>
+        <input type="text" name="LName" id="LastName"><br><br>
+
+         <input type="submit" value="submit" onclick="Result()">
+    </form>
+
+    <script>
+
+      var Result = () =>{
+            
+        var x = document.forms["FormData"];
+        let GetData = "";
+
+        for(let i = 0; i < x.length; i++){
+            GetData += x.elements[i].value + "\n";
+        }
+        alert(GetData + "\n" + `${x.elements[0].innerHTML}`);
+      }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEBx86 Infotech Student Registration</title>
+    </head>
+    <body>
+        <h1>Student Information</h1>
+        <form action="Data.php">
+            <label for="FirstName">First Name :</label>
+            <input type="text" name="FName" id="FirstName" placeholder="Enter Your Name"><br><br>
+    
+            <label for="MiddleName">Middle Name :</label>
+            <input type="text" name="MName" id="MiddleName"><br><br>
+    
+            <label for="LastName">Last Name :</label>
+            <input type="text" name="LName" id="LastName"><br><br>
+    
+            <label for="MobileNumber">Mobile Number :</label>
+            <input type="number" name="MobNo" id="MobileNumber"><br><br>
+    
+            <label for="YourEmail">Email :</label>
+            <input type="email" name="emil" id="YourEmail"><br><br>
+    
+            <label for="YourAddress">Address:</label>
+            <textarea name="Address" id="YourAddress" cols="15" rows="3"></textarea><br><br>
+    
+            <label>Gender: </label><br><br>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+    
+            <input type="radio" id="Female" name="gender" value="Female">
+            <label for="Female">Female</label>
+    
+            <input type="radio" id="Other" name="gender" value="Other">
+            <label for="Other">Other</label> <br><br>
+    
+            <label for="State">Select Your State : </label>
+            <select name="YourState" id="State">
+                <option value="">-- Select State --</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Goa">Goa</option>
+                <option value="UP">UP</option>
+            </select><br><br>
+    
+            <label>Choose Your Laguages :</label><br>
+            <input type="checkbox" name="Language" id="ChooseJava" value="Java">
+            <label for="ChooseJava">Java</label>
+    
+            <input type="checkbox" name="Language" id="ChoosePython" value="Python">
+            <label for="ChoosePython">Python</label>
+    
+             <input type="checkbox" name="Language" id="ChooseCPP" value="CPP">
+            <label for="ChooseCPP">CPP</label><br><br>
+    
+            <input type="submit">
+        </form>
+    </body>
+</html>

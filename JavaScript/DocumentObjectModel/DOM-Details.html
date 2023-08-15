@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <h1>Document Object Model</h1>
+    <h3>Dom Details</h3>
+    <p class="Para">
+       Demo Data 01
+    </p>
+
+    <section>
+        Hello Section 01
+    </section>
+
+    <p id="demo" class="Para">Demo Data 02</p>
+
+    <img id="Image" src="../../Assets/Nature.jpg" alt="Nature" height="150px" width="150px">
+    <button id="ShowImage" onclick="ShowImage()">Show Image</button>
+
+    <section>
+        Helo Section 02
+    </section>
+
+    <h3>Contact Details</h3>
+    <form>
+        <label for="Name">Enter Your Name : </label><br>
+        <input type="text" id="Name" name="FullName"> 
+
+        <input type="submit">
+    </form>
+
+    <p class="Para">
+         Demo Data 03
+    </p>
+
+    <section>
+        Hello Section 03
+    </section>
+
+    <script>
+        var x = document.getElementById("demo");
+        x.style.color = "red";
+
+        var ImageData = document.getElementById("Image");
+       //ImageData.style.display = "none";
+
+        let ShowImage = () =>{
+            alert("Hello Inside Show Image");
+            ImageData.src = "../../Assets/AshokChakra.png";
+           // ImageData.style.display = "inline";
+        }
+
+        let GetClassCollection = document.getElementsByClassName("Para");
+
+        var CreateCollectrionInList = "";
+
+        for(let i = 0; i < GetClassCollection.length; i++){
+            console.log(GetClassCollection[i].innerHTML.trim());
+            CreateCollectrionInList += `<li>${GetClassCollection[i].innerHTML.trim()}</li>`;
+        }
+
+        document.write(CreateCollectrionInList);
+
+        var GetAllSections = document.getElementsByTagName("section");
+        var TagList = "";
+
+        for(let i = 0; i < GetAllSections.length; i++){
+            TagList += `<li>${GetAllSections[i].innerHTML.trim()}</li>`;
+        }
+
+        document.write(TagList);
+
+    
+    </script>
+</body>
+</html>
